@@ -1,0 +1,12 @@
+[Unit]
+Description=wifi to serial bridge
+After=systemd-timedated.service
+
+[Service]
+Type=fork
+User=root
+Group=root
+ExecStart=/bin/wifiBridge.sh
+
+[Install]
+WantedBy=multi-user.target
